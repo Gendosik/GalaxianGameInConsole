@@ -136,10 +136,6 @@ namespace SrarWars
                 this._cordinatsShips = new Random();
             }
 
-        private void ClearListEnemyShip()
-        {
-            _countEnemyShip.Clear();
-        }
         public void AddNewShip()
         {
             for (int i = 0;i<5;i++)
@@ -158,7 +154,7 @@ namespace SrarWars
                 if (_enemStarShip.GetStartPozitionY > 25)
                 {
                     _time.Stop();
-                    ClearListEnemyShip();
+                    _countEnemyShip.Clear();
                     AddNewShip();
                     _time.Start();
                 }
